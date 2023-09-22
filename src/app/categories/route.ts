@@ -9,5 +9,5 @@ export async function GET() {
   )
   const data = (await response.json()) as Category[]
 
-  return NextResponse.json(data)
+  return NextResponse.json({ data })
 }
