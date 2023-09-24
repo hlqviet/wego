@@ -5,7 +5,7 @@ import useQuery from '@/src/hooks/useQuery'
 import Food from '@/src/models/food'
 
 interface UseGetFoodsQueryProps {
-  categoryId?: number
+  categoryId?: string
   restaurant?: string
   page?: number
 }

@@ -9,7 +9,7 @@ const CardImage = (props: CardImageProps) => {
 
   return (
     <div
-      className={`h-[200px] bg-no-repeat bg-cover rounded-t-lg`}
+      className={`h-44 bg-no-repeat bg-cover rounded-t-lg`}
       style={{ backgroundImage: `url('${src}')` }}
       {...rest}
     />
