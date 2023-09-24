@@ -14,7 +14,7 @@ const TextField = (props: TextFieldProps) => {
           className: 'absolute min-w-[2.5rem] min-h-[2.5rem] p-3'
         })}
       <input
-        className={`p-2 text-sm md:text-base ${
+        className={`p-2 text-sm md:text-base disabled:cursor-not-allowed ${
           startIcon ? 'pl-10' : ''
         } rounded-lg ${className}`}
         role='textbox'

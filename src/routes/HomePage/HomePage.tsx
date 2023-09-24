@@ -83,6 +83,7 @@ const HomePage = () => {
         <TextField
           startIcon={<SearchIcon />}
           placeholder='Enter restaurant name...'
+          disabled={categoryLoading || foodLoading}
           value={inputValue}
           onChange={(event) => setInputValue(event.currentTarget.value)}
         />
