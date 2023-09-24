@@ -17,6 +17,7 @@ const TextField = (props: TextFieldProps) => {
         className={`p-2 text-sm md:text-base ${
           startIcon ? 'pl-10' : ''
         } rounded-lg ${className}`}
+        role='textbox'
         {...rest}
       />
     </div>
