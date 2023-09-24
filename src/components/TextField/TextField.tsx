@@ -14,7 +14,9 @@ const TextField = (props: TextFieldProps) => {
           className: 'absolute min-w-[2.5rem] min-h-[2.5rem] p-3'
         })}
       <input
-        className={`p-2 ${startIcon ? 'pl-10' : ''} rounded-lg ${className}`}
+        className={`p-2 text-sm md:text-base ${
+          startIcon ? 'pl-10' : ''
+        } rounded-lg ${className}`}
         {...rest}
       />
     </div>

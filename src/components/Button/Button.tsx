@@ -5,7 +5,7 @@ const Button = (props: ButtonHTMLAttributes<HTMLButtonElement>) => {
 
   return (
     <button
-      className={`px-8 py-2 border border-solid border-yellow-400 rounded-xl hover:bg-yellow-400 active:bg-yellow-300 transition ${className}`}
+      className={`px-4 py-1 text-sm md:px-8 md:py-2 md:text-base border border-solid border-yellow-400 rounded-xl hover:bg-yellow-400 active:bg-yellow-300 transition ${className}`}
       {...rest}
     />
   )

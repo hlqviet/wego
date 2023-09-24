@@ -1,8 +1,8 @@
-import { Key } from 'react'
+import { HTMLAttributes, Key } from 'react'
 
 import Tab from '@/src/components/Tabs/Tab'
 
-interface TabsProps {
+interface TabsProps extends HTMLAttributes<HTMLUListElement> {
   activeKey: Key
   tabs: {
     key: Key
@@ -13,10 +13,10 @@ interface TabsProps {
 }
 
 const Tabs = (props: TabsProps) => {
-  const { activeKey, tabs, onTabClick } = props
+  const { activeKey, tabs, onTabClick, ...rest } = props
 
   return (
-    <ul>
+    <ul {...rest}>
       {tabs.map(({ key, text, value }) => (
         <Tab
           key={key}
