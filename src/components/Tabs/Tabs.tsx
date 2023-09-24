@@ -7,18 +7,20 @@ interface TabsProps extends HTMLAttributes<HTMLUListElement> {
   tabs: {
     key: Key
     text: string
-    value: string | number
+    value: string
   }[]
-  onTabClick: (value: string | number) => void
+  disabled?: boolean
+  onTabClick: (value: string) => void
 }
 
 const Tabs = (props: TabsProps) => {
-  const { activeKey, tabs, onTabClick, ...rest } = props
+  const { activeKey, tabs, disabled, onTabClick, ...rest } = props
 
   return (
     <ul {...rest}>
       {tabs.map(({ key, text, value }) => (
         <Tab
+          disabled={disabled}
           key={key}
           value={value}
           className={key === activeKey ? 'bg-yellow-400' : ''}
