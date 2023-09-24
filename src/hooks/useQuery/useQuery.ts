@@ -17,7 +17,7 @@ const useQuery = <T extends any>(props: UseQueryProps) => {
   const { action, resource, options, query } = props
   const [error, setError] = useState<Error | undefined>()
   const [data, setData] = useState<GetResponse<T> | undefined>()
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const abortController = new AbortController()
