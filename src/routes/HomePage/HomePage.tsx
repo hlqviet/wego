@@ -88,13 +88,15 @@ const HomePage = () => {
         />
       </form>
 
-      <Tabs
-        className='my-6'
-        disabled={categoryLoading || foodLoading}
-        activeKey={activeCategory}
-        tabs={[{ key: '', text: 'All', value: '' }, ...tabs]}
-        onTabClick={handleCategoryClick}
-      />
+      {!categoryLoading && (
+        <Tabs
+          className='my-6'
+          disabled={categoryLoading || foodLoading}
+          activeKey={activeCategory}
+          tabs={[{ key: '', text: 'All', value: '' }, ...tabs]}
+          onTabClick={handleCategoryClick}
+        />
+      )}
 
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4'>
         {foodData.map(
