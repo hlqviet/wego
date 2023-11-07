@@ -1,17 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-import { API_HOST, ITEMS_PER_PAGE } from '@/src/common/constants'
+import { ITEMS_PER_PAGE } from '@/src/common/constants'
 import { deserializeRequest, filterData } from '@/src/common/helpers'
+import food from '@/src/data/food.json'
 import Food from '@/src/models/food'
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
   const page = Number(searchParams.get('page')) || 1
   const { filters, terms } = deserializeRequest(request, ['filters', 'terms'])
-  const response = await fetch(
-    `${API_HOST}/a24cfec5-f76c-410b-a5ac-9f63fab28abb`
-  )
-  const data = (await response.json()) as Food[]
+  const data = food as Food[]
   const filteredData = filterData({
     data,
     filters,

@@ -108,12 +108,16 @@ const HomePage = () => {
             isNew,
             promotion,
             rating,
+            restaurant,
             minCookTime,
             maxCookTime
           }) => (
             <Card key={id} className='relative cursor-pointer'>
               <CardImage src={imageUrl} />
-              <CardHeading>{name}</CardHeading>
+              <CardHeading>
+                {name}
+                <Text className='block'>{restaurant}</Text>
+              </CardHeading>
               <CardBody>
                 <Tag>
                   <StarIcon width={15} height={15} className='inline mb-1' />{' '}
